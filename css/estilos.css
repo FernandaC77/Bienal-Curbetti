@@ -1,0 +1,666 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:'Rubik', sans-serif;
+    box-sizing: border-box;
+}
+
+/**Fuentes**/
+body {
+    display: grid;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight:300;
+    color: black;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+} 
+
+a {
+    text-decoration: none;
+    color: rgb(44, 44, 44);
+}
+
+a:hover {
+    color: rgb(240, 80, 80);
+    font-weight: 700px;
+}
+
+/**Contenedor**/
+    .contenedor {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat (1fr 7);
+    grid-template-areas: 
+        "Arriba"
+        "portada"
+        "programa"
+        "UltimaEdicion"
+        "CatalogosDescargables"
+        "Inscribite"
+        "FormularioDeConsulta"
+        "PieDePagina";
+    }
+
+/**Header**/
+#Arriba {
+    grid-area: Arriba;
+}
+
+header {
+    display: inline-flex;
+    width: 100%;
+    padding-top: 30px;
+    align-items:center;
+    justify-content:space-between;
+}
+
+header a {
+    display: flex;
+    padding-left: 60px;
+}
+
+header a button {
+    margin-right: 50px;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 10px;
+}
+
+header a button:hover {
+    text-transform: uppercase;
+    font-weight: 300;
+    background-color: rgb(230, 52, 52);
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 10px;
+}
+
+header a img {
+    margin-left: 50px;
+    margin-top: 35px;
+}
+
+header a img:hover {
+    opacity: 80%;
+}
+
+/**Menú**/
+header li {
+    list-style: none;
+    text-decoration: none;
+    font-weight: 400;
+    letter-spacing: 1px;
+    display: inline-block;
+    position: relative;
+    padding-top: 45px
+}
+
+ul ul {
+    position: absolute;
+    display: none;
+}
+
+ul ul li {
+    display: block;
+    padding:15px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+ul li:hover ul {
+    display: block;
+    font-weight: 500;
+}
+
+li:hover {
+    color: rgb(219, 64, 64);
+}
+
+p {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+/**Botones**/
+button {
+    font-size: 23px;
+    font-weight: 600;
+    color:rgb(255, 255, 255);
+    background-color: black;
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+button:hover {
+    font-size: 23px;
+    font-weight: 600;
+    color: white;
+    background-color:#2E1284;
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    margin-top: 50px;
+}
+
+/**Portada**/
+h1 {
+    text-transform: uppercase;
+    font-size: 35px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin-left: 130px;
+}
+
+.portada {
+    grid-area: portada;
+    height: 530px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        ". . . . "
+        "h1port h1port imgp imgp"
+        "pport pport imgp imgp"
+        ". . . . " ;
+    align-items: end;
+}
+
+.imgp {
+    grid-area: imgp;
+    padding-left: 30px;
+}
+
+.h1port {
+    grid-area: h1port;
+}
+
+.pport {
+    grid-area: pport;
+}
+
+.portada p {
+    margin-left: 130px;
+    text-align: start;
+    padding-top: 20px;
+    padding-bottom: 200px;
+    width: 100%;
+    height: 300px;
+}
+
+/**Sections**/
+.programa {
+    grid-area: programa;
+    background-color: #58C6B5;
+    height: 730px;
+    display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 400px 1fr;
+        grid-template-areas:
+            "titProg"
+            "dias" 
+            "BotProg";
+    justify-items: center;
+}
+
+.titProg {
+    grid-area: titProg;
+    padding-top: 40px;
+}
+
+
+.dias {
+    grid-area: dias;
+    align-items: start;
+    display: inline-flex;
+    list-style: none;
+    padding-top: 30px;
+}
+
+.dias li {
+    padding-left: 15px;
+}
+
+.dias li img {
+    padding-bottom: 20px;
+}
+
+.dias li img:hover {
+    opacity: 80%;
+}
+
+.BotProg {
+    grid-area: BotProg;
+    padding-top: 20px;
+}
+
+.BotProg a button {
+    margin-right: 50px;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 10px;
+}
+
+.BotProg a button:hover {
+    text-transform: uppercase;
+    font-weight: 300;
+    background-color: rgb(230, 52, 52);
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 10px;
+}
+
+.programa li:hover {
+    color: black;
+}
+
+
+.slider {
+    display: flex;
+    justify-content: center;
+}
+
+.UltimaEdicion {
+    grid-area: UltimaEdicion;
+    padding-bottom: 70px;
+    padding-top: 70px;
+    background-color: #ED695F;
+    height: 800px;
+    width: 100%;
+}
+
+.CatalogosDescargables {
+    grid-area: CatalogosDescargables;
+    background-color: #F6D244;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.CatalogosDescargables ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.CatalogosDescargables li:hover {
+    color: black;
+}
+
+
+.Inscribite {
+    grid-area: Inscribite;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #58C6B5;
+    color: black;
+    display: flex;
+    justify-content:space-evenly;
+    align-items:center;
+}
+
+.caja1 p {
+    text-align: left;
+    font-size: 18px;
+}
+
+.Inscribite a button {
+    margin-right: 50px;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 10px;
+}
+
+.Inscribite a button:hover {
+    text-transform: uppercase;
+    font-weight: 300;
+    background-color: rgb(230, 52, 52);
+    font-size: 20px;
+    padding-top: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 10px;
+}
+
+.FormularioDeConsulta form {
+    width: 600px;
+}
+
+.FormularioDeConsulta {
+    grid-area: FormularioDeConsulta;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    background-color: #EDECFA;
+}
+
+.FormularioIMG {
+    display: inline-block;
+    margin-left: 10%;
+    margin-right: 40px
+}
+
+/**footer**/
+.PieDePagina {
+    grid-area: PieDePagina;
+    background: linear-gradient(to top, #ffd365, #F6D244);
+    display: grid;
+    padding-top: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        "mapa Instituciones Instituciones"
+        "mapa Instituciones Instituciones"
+        "mapa Instituciones Arriba"    
+    ;
+    grid-column-gap: 50px;
+    grid-row-gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.mapa ul li {
+    display: block;
+}
+
+.Instituciones a {
+    padding-left: 40px;
+}
+
+/**Formularios**/
+fieldset {
+    padding: 50px;
+    background-color: #58C6B5;
+    border: none;
+}
+
+fieldset label legend {
+    border: none;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/**Media Queries**/
+@media only screen and (max-width:768px) {
+    .contenedor {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat (1fr 7);
+        grid-template-areas: 
+            "Arriba"
+            "portada"
+            "programa"
+            "UltimaEdicion"
+            "CatalogosDescargables"
+            "Inscribite"
+            "FormularioDeConsulta"
+            "PieDePagina";
+        overflow: hidden;
+        text-align: center;
+        justify-items: center;
+        align-items: center;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 30px;
+    }
+
+    header img {
+        width: 450px;
+        margin-right: 30px;
+    }
+
+    header a button {
+        width:300px;
+        height: 80px;
+        font-size: 40px;
+    }
+
+    /**Menú**/
+    header li {
+        list-style: none;
+        text-decoration: none;
+        font-weight: 400;
+        letter-spacing: 1px;
+        display: inline-block;
+        position: relative;
+        padding-top: 45px
+    }
+
+    ul ul {
+        position: absolute;
+        display: none;
+    }
+
+    ul ul li {
+        display: block;
+        padding:15px;
+        margin-top: 10px;
+        font-size: 30px;
+    }
+
+    ul li:hover ul {
+        display: block;
+        font-weight: 500;
+    }
+
+    li:hover {
+        color: rgb(219, 64, 64);
+    }
+
+    p {
+        font-size: 30px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .portada {
+        display: grid;
+        margin-top: 5%;
+        grid-template-columns: 90%;
+        grid-template-rows: 1fr 5% 35%;
+        grid-template-areas:
+        "imgp"
+        "h1port"
+        "pport";
+        height: 20%;
+        justify-items: stretch;
+        align-items: center;
+    }
+
+    .imgp {
+        grid-area: imgp;
+    }
+
+    .h1port {
+        grid-area: h1port;
+    }
+
+    .pport {
+        grid-area: pport;
+        text-align: left;
+    }
+
+    .portada div p {
+        text-align: center;
+        font-size: 30px;
+        width: 90%;
+    }
+
+    .programa {
+        display: grid;
+        height: 85%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat (1fr 10);
+        grid-template-areas: 
+            "titProg"
+            "dias"
+            "dias"
+            "dias"
+            "dias"
+            "dias"
+            "dias"
+            "dias"
+            "BotProg"
+        ;
+        justify-items:center;
+        text-align: left;
+        font-size: 25px;
+    }
+
+    .titProg {
+        grid-area: titProg;
+    }
+
+    .dias {
+        grid-area: dias;
+        display: block;
+    }
+
+    .dias li {
+        padding-bottom: 40px;
+    }
+
+    .BotProg {
+        grid-area: BotProg;
+        padding-bottom: 30px;
+        margin: auto;
+    }
+
+    .UltimaEdicion {
+        display: grid;
+        height: 70%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat (1fr 4);
+        grid-template-areas: 
+            "ult"
+            "slider"
+            "slider"
+            "slider"
+            "slider"
+        ;
+    }
+
+    .ult {
+        grid-area: ult;
+    }
+
+    .slider {
+        grid-area: slider;
+        width: 130px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+
+
+    .CatalogosDescargables ul {
+        display: block;
+    }
+
+    .Inscribite {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+}
+
+    .Inscribite p {
+        font-size: 1.8rem;
+    }
+
+    .FormularioDeConsulta {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 50px;
+        font-size: 30px;
+    }
+
+    .FormularioDeConsulta img {
+        padding-top: 50px;
+    }
+
+    .PieDePagina {
+        display: grid;
+        background-color: #ffd365;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "mapa"
+            "Instituciones"
+            "botonarriba"
+        ;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mapa {
+        grid-area: mapa;
+        display: block;
+        font-size: 30px;
+        padding-top: 50px;
+    }
+
+    .Instituciones {
+        grid-area: Instituciones;
+        display: inline-block;
+        align-items: center;
+        font-size: 30px;
+        padding-top: 30px;
+    }
+
+    .botonarriba {
+        grid-area: botonarriba;
+    }
+}
+
+/**Animaciones**/
+    .slider img {
+        transition: padding 2s;
+    }
+
+    .slider img:hover {
+        padding-top: 50px
+    }
+
