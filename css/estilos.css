@@ -31,20 +31,10 @@ a:hover {
 }
 
 /**Contenedor**/
-    .contenedor {
+    .container-fluid {
     overflow: hidden;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat (1fr 7);
-    grid-template-areas: 
-        "Arriba"
-        "portada"
-        "programa"
-        "UltimaEdicion"
-        "CatalogosDescargables"
-        "Inscribite"
-        "FormularioDeConsulta"
-        "PieDePagina";
+    padding-right: 0;
+    padding-left: 0;
     }
 
 /**Header**/
@@ -190,7 +180,9 @@ h1 {
 
 .imgp {
     grid-area: imgp;
-    padding-left: 30px;
+    padding-top: 25rem;
+    padding-right: 3rem;
+    padding-bottom: 3rem;
 }
 
 .h1port {
@@ -199,6 +191,7 @@ h1 {
 
 .pport {
     grid-area: pport;
+    width: 30rem;
 }
 
 .portada p {
@@ -376,6 +369,7 @@ h1 {
 /**footer**/
 .PieDePagina {
     grid-area: PieDePagina;
+    height: 300px;
     background: linear-gradient(to top, #ffd365, #F6D244);
     display: grid;
     padding-top: 50px;
@@ -403,7 +397,6 @@ h1 {
 /**Formularios**/
 fieldset {
     padding: 50px;
-    background-color: #58C6B5;
     border: none;
 }
 
@@ -414,7 +407,7 @@ fieldset label legend {
 }
 
 /**Media Queries**/
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:1200px) {
     .contenedor {
         display: grid;
         grid-template-columns: 100%;
@@ -504,12 +497,13 @@ fieldset label legend {
         "h1port"
         "pport";
         height: 20%;
-        justify-items: stretch;
-        align-items: center;
+        justify-content: end;
+        align-items: start;
     }
 
     .imgp {
         grid-area: imgp;
+        padding-top: 5rem;
     }
 
     .h1port {
@@ -518,7 +512,8 @@ fieldset label legend {
 
     .pport {
         grid-area: pport;
-        text-align: left;
+        font-size: 20px;
+        width: 40rem;
     }
 
     .portada div p {
@@ -595,7 +590,9 @@ fieldset label legend {
 
 
     .CatalogosDescargables ul {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .Inscribite {
@@ -615,10 +612,6 @@ fieldset label legend {
         align-items: center;
         padding-top: 50px;
         font-size: 30px;
-    }
-
-    .FormularioDeConsulta img {
-        padding-top: 50px;
     }
 
     .PieDePagina {
@@ -656,11 +649,5 @@ fieldset label legend {
 }
 
 /**Animaciones**/
-    .slider img {
-        transition: padding 2s;
-    }
 
-    .slider img:hover {
-        padding-top: 50px
-    }
 
